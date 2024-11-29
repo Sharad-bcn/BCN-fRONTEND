@@ -1,0 +1,136 @@
+.main {
+  .filterSec {
+    position: relative;
+
+    .filter,
+    .filterAlt {
+      padding: 0.25rem 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      font-family: var(--ff-primary);
+      font-weight: 600;
+      color: var(--c-font-dark);
+      font-size: 0.8rem;
+    }
+
+    .filterAlt {
+      background: var(--c-white);
+      color: var(--c-black);
+      border-radius: 0.25rem;
+      border: 0.1rem solid var(--c-primary);
+
+      & > span {
+        color: var(--c-primary);
+      }
+    }
+
+    .filterFields {
+      padding: 0.5rem;
+      border-radius: 0.25rem;
+      display: flex;
+      flex-direction: column;
+      white-space: nowrap;
+      background: var(--c-white);
+      box-shadow: 0.2rem 0.2rem 0.5rem var(--c-shadow);
+      position: absolute;
+      top: 1.9rem;
+      z-index: 15;
+      border: 0.1rem solid var(--c-primary);
+      min-width: 100%;
+      max-height: 30vh;
+      overflow: hidden;
+
+      .filterFieldsInner {
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        &::-webkit-scrollbar {
+          width: 0.3em;
+        }
+        &::-webkit-scrollbar-track {
+          background-color: var(--c-border);
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: var(--c-primary);
+        }
+      }
+
+      .filterField {
+        width: auto;
+        padding: 0.5rem;
+        cursor: pointer;
+        font-family: var(--ff-primary);
+        font-weight: 500;
+        color: var(--c-font);
+        font-size: 0.8rem;
+        border-bottom: 1px solid var(--c-primary-light);
+
+        &:hover {
+          color: var(--c-font-dark);
+          font-weight: 600;
+        }
+
+        &:last-child {
+          border: none;
+        }
+      }
+
+      .active {
+        color: var(--c-primary);
+        font-weight: 600;
+        background: var(--c-border);
+
+        &:hover {
+          color: var(--c-primary);
+        }
+      }
+
+      .reset {
+        width: auto;
+        padding: 0.5rem;
+        cursor: pointer;
+        font-family: var(--ff-primary);
+        font-weight: 500;
+        color: var(--c-primary);
+        // border-bottom: 1px solid var(--c-primary-light);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & > span {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1279px) {
+  .main {
+    .filterSec {
+      .filter,
+      .filterAlt {
+        font-size: 0.8rem;
+      }
+
+      .filterAlt {
+        & > span {
+          font-size: 1.2rem;
+        }
+      }
+
+      .filterFields {
+        padding: 0.25rem;
+        max-height: 15vh;
+
+        .filterField {
+          padding: 0.5rem;
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}

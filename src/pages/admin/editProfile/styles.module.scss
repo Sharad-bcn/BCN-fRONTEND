@@ -1,0 +1,309 @@
+.main {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  // display: 'flex', alignItems: 'center', height: '100%', justifyContent: 'center'
+}
+
+.editProfile {
+  padding: 0 1rem;
+  height: 100%;
+}
+
+.loader {
+  display: flex;
+  height: 100%;
+  min-height: 90vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.actionButtons {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0.5rem !important;
+  justify-content: space-between;
+  width: 100%;
+  border-top: 0.1rem solid var(--c-primary);
+
+  & > a {
+    color: var(--c-white);
+    border: 0.1rem solid var(--c-primary);
+    background: var(--c-primary);
+    margin-right: 1rem;
+    text-transform: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.25rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+
+    & > span {
+      margin-right: 0.25rem;
+      font-size: 1rem;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  & > div {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.25rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+
+    & > span {
+      margin-right: 0.25rem;
+      font-size: 1rem;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .discard {
+    color: var(--c-primary);
+    border: 0.1rem solid var(--c-primary);
+    background: var(--c-white);
+    margin-right: 1rem;
+  }
+
+  .save {
+    color: var(--c-white);
+    border: 0.1rem solid var(--c-primary);
+    background: var(--c-primary);
+  }
+}
+
+.rejectionMessage {
+  background: var(--c-primary-light);
+  color: var(--c-primary);
+  border: 0.1rem solid var(--c-red);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  text-align: justify;
+
+  .title {
+    font-size: 0.8rem;
+    text-align: center;
+    color: var(--c-black);
+    text-decoration: underline;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  // height: 100%;
+
+  .approvalStatus {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > span {
+      background: var(--c-primary);
+      color: var(--c-white);
+      padding: 0.25rem 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      border-radius: 0.5rem;
+    }
+  }
+
+  .form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10rem;
+
+    & > div {
+      padding: 0.5rem 1rem;
+    }
+
+    .image {
+      width: 10rem;
+      height: 10rem;
+      align-self: center;
+      margin: 2rem 0;
+      position: relative;
+      border: 1px solid var(--c-primary);
+      padding: 0;
+
+      .imageActions {
+        position: absolute;
+        aspect-ratio: 1;
+        color: var(--c-white);
+        background: var(--c-primary);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s ease;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        border-radius: 50%;
+        transform: translate(50%, 50%);
+        padding: 0 0.5rem;
+        transition: all 0.5s ease;
+        cursor: pointer;
+
+        .uploadButton {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: all 0.5s ease;
+        }
+
+        & > span {
+          font-size: 1rem;
+        }
+
+        &:hover {
+          transform: translate(50%, 50%) scale(1.05);
+        }
+      }
+
+      & > img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .locationFields > div {
+      width: 30%;
+    }
+
+    .businessHolder {
+      font-size: 1rem;
+      color: var(--c-black);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+
+      & > span {
+        transition: all 0.5s ease;
+        cursor: pointer;
+        font-size: 1.5rem;
+        margin-left: 0.5rem;
+
+        &:first-child {
+          font-size: 1.25rem;
+          color: var(--c-primary);
+          margin-left: 0rem;
+          margin-right: 0.5rem;
+        }
+
+        &:nth-child(2) {
+          font-size: 1rem;
+          display: flex;
+          align-items: center;
+
+          & > span {
+            font-size: 2.5rem;
+            color: var(--c-primary);
+            margin: 0 0.5rem;
+          }
+        }
+      }
+    }
+
+    .referredUsers {
+      font-size: 1rem;
+      color: var(--c-black);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+
+      & > span {
+        color: var(--c-primary);
+
+        &:first-child {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1279px) {
+  .editProfile {
+    padding: 0 0.5rem;
+  }
+
+  .actionButtons {
+    & > div,
+    & > a {
+      font-size: 0.75rem;
+      margin-right: 0.5rem;
+      padding: 0.25rem 0.5rem;
+
+      & > span {
+        font-size: 1rem;
+      }
+    }
+
+    & > div:last-child {
+      margin-right: 0;
+    }
+
+    .discard {
+      margin-right: 0.5rem;
+    }
+  }
+
+  .content {
+    .form {
+      padding-bottom: 4rem;
+
+      & > div {
+        padding: 0.5rem;
+      }
+
+      .rows > div:nth-child(2) {
+        padding-top: 1rem;
+      }
+
+      .locationFields > div {
+        width: 100%;
+
+        &:nth-child(2),
+        &:nth-child(3) {
+          padding-top: 1rem;
+        }
+      }
+
+      .businessHolder {
+        & > span {
+          &:nth-child(2) {
+            & > span {
+              font-size: 3.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

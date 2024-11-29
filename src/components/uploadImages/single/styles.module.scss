@@ -1,0 +1,70 @@
+.main {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  width: 10rem;
+  height: 10rem;
+  margin: 2rem 0;
+  position: relative;
+  border: 1px solid var(--c-primary);
+  padding: 0;
+
+  .imageActions {
+    position: absolute;
+    color: var(--c-white);
+    background: var(--c-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    border-radius: 50%;
+    transform: translate(50%, 50%);
+    transition: all 0.5s ease;
+    cursor: pointer;
+
+    .uploadButton {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      aspect-ratio: 1;
+      padding: 0 0.5rem;
+      transition: all 0.5s ease;
+
+      & > span {
+        font-size: 1.2rem;
+      }
+    }
+
+    &:hover {
+      transform: translate(50%, 50%) scale(1.05);
+    }
+  }
+
+  & > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 1279px) {
+  .image {
+    margin: 1rem 0;
+
+    .imageActions {
+      & > span {
+        font-size: 0.6rem;
+      }
+    }
+  }
+}

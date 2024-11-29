@@ -1,0 +1,136 @@
+.field {
+  width: 100%;
+  // padding: 1.5rem 0;
+  // height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .label {
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    color: var(--c-black);
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.25rem;
+    font-family: var(--ff-title);
+    font-weight: 700;
+  }
+
+  .fieldData {
+    display: flex;
+    align-items: center;
+    border: 0.1rem solid var(--c-primary);
+    border-radius: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    background: var(--c-white);
+
+    .input {
+      outline: none;
+      border: none;
+      font-family: var(--ff-content);
+      color: var(--c-font);
+      background: transparent;
+      font-style: italic;
+      font-weight: 400;
+      width: 100%;
+      font-size: 0.8rem;
+
+      &::placeholder {
+        font-family: var(--ff-content);
+        color: var(--c-font);
+      }
+    }
+
+    .iconLeft,
+    .iconRight {
+      color: var(--c-primary);
+      font-weight: 400;
+      padding-right: 0.5rem;
+    }
+
+    .iconRight {
+      cursor: pointer;
+      padding-right: 0rem;
+      padding-left: 0.5rem;
+    }
+
+    .speech {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .searchText {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--c-primary);
+      margin-left: 0.5rem;
+      cursor: pointer;
+    }
+
+    .mic {
+      background: var(--c-primary);
+      color: var(--c-white);
+      padding-left: 0rem;
+      font-size: 0.8rem;
+      margin-left: 0.5rem;
+      padding: 0.25rem;
+      border-radius: 50%;
+      z-index: 2;
+    }
+
+    .circles {
+      height: 3rem;
+      position: absolute;
+      width: 3rem;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      padding-left: 0.25rem;
+
+      & > div {
+        animation: growAndFade 3s infinite ease-out;
+        background-color: var(--c-primary);
+        border-radius: 50%;
+        height: 100%;
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+      }
+
+      .circle1 {
+        animation-delay: 1s;
+      }
+      .circle2 {
+        animation-delay: 2s;
+      }
+      .circle3 {
+        animation-delay: 3s;
+      }
+    }
+
+    @keyframes growAndFade {
+      0% {
+        opacity: 0.5;
+        transform: scale(0);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+@media (max-width: 1279px) {
+  .fieldData {
+    .iconLeft,
+    .iconRight {
+      font-size: 1rem;
+    }
+  }
+}

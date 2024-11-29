@@ -1,0 +1,106 @@
+@import 'src/styles/mixins';
+
+.main {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.loader {
+  display: flex;
+  min-height: 90vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.settings {
+  padding: 0 1rem;
+  height: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  // height: 100%;
+  padding: 1rem;
+  padding-bottom: 4rem;
+}
+
+.planInfoCard {
+  transition: all 0.5s ease;
+  // border: 3px solid var(--c-black);
+  // box-shadow: 0px 4px 16px 0px var(--c-shadow);
+  border: 3px solid var(--c-primary);
+  box-shadow: 0px 4px 16px 0px var(--c-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--c-black);
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+
+  // &:hover {
+  //   border: 3px solid var(--c-primary);
+  //   box-shadow: 0px 4px 16px 0px var(--c-primary);
+  //   transform: scale(1.05);
+  // }
+}
+
+.activePlanName {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.activePlanDuration {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.activePlanPrice {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--c-primary);
+}
+
+.actionButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & > a:nth-child(2) {
+    margin-left: 1.5rem;
+  }
+}
+
+.renewPlan,
+.viewReceipt {
+  margin: 1rem 0;
+  color: var(--c-white);
+  background: var(--c-primary);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.5s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 1279px) {
+  .settings {
+    padding: 0 0.5rem;
+  }
+
+  .content {
+    padding: 0.5rem;
+  }
+}

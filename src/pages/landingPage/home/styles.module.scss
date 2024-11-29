@@ -1,0 +1,132 @@
+.main {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem 0;
+
+  .searchField {
+    width: 60%;
+    display: flex;
+    align-items: center;
+
+    & > div:first-child {
+      padding-right: 1rem;
+      width: 45%;
+    }
+  }
+
+  .invite {
+    // width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    color: var(--c-primary);
+    font-style: italic;
+    font-size: 1rem;
+    font-family: var(--ff-content);
+    cursor: pointer;
+
+    & > span {
+      display: flex;
+      align-items: center;
+
+      & > span {
+        padding-left: 0.5rem;
+      }
+
+      &:nth-child(2) {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .inviteResponsive {
+    display: none;
+  }
+}
+
+.show {
+  width: 100%;
+  height: 100%;
+  padding: 3rem 0;
+  display: flex;
+
+  & > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 1279px) {
+  .header {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .searchField {
+      width: 100%;
+      flex-direction: column;
+
+      & > div:first-child {
+        padding-right: 0;
+        margin: 1rem 0;
+        width: 100%;
+        align-self: start;
+      }
+    }
+
+    .invite {
+      display: none;
+    }
+
+    .fields {
+      display: flex;
+      justify-content: space-between;
+
+      & > div {
+        width: 48%;
+      }
+    }
+
+    .inviteResponsive {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      // justify-content: flex-end;
+      color: var(--c-primary);
+      font-style: italic;
+      font-size: 0.75rem;
+      font-family: var(--ff-content);
+      cursor: pointer;
+
+      & > span {
+        display: flex;
+        align-items: center;
+
+        & > span {
+          font-size: 1rem;
+          padding-left: 0.25rem;
+        }
+
+        &:nth-child(2) {
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+
+  .show {
+    padding: 2rem 0;
+  }
+}

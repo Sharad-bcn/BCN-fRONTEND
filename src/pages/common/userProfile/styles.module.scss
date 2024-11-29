@@ -1,0 +1,451 @@
+.main {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.loader {
+  display: flex;
+  height: 100%;
+  min-height: 90vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.noData {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem 2rem;
+
+  .searchField {
+    width: 60%;
+    display: flex;
+    align-items: center;
+
+    & > div:first-child {
+      padding-right: 1rem;
+      width: 45%;
+    }
+  }
+
+  .invite {
+    // width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    color: var(--c-primary);
+    font-style: italic;
+    font-size: 1rem;
+    font-family: var(--ff-content);
+    cursor: pointer;
+
+    & > span {
+      display: flex;
+      align-items: center;
+
+      & > span {
+        padding-left: 0.5rem;
+      }
+
+      &:nth-child(2) {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .inviteResponsive {
+    display: none;
+  }
+}
+
+.userProfile {
+  .userInfoOuter {
+    padding: 1rem 0;
+
+    .title {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--c-black);
+    }
+
+    .userInfo {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+
+      .left {
+        padding-right: 1rem;
+
+        .userName,
+        .email,
+        .refId,
+        .state,
+        .city {
+          font-size: 1rem;
+          font-weight: 500;
+          margin-bottom: 0.5rem;
+          text-transform: capitalize;
+
+          & > span {
+            color: var(--c-black);
+            font-weight: 600;
+            margin-right: 0.5rem;
+          }
+        }
+
+        .email {
+          color: var(--c-font);
+          text-decoration: underline;
+          text-transform: unset;
+          display: flex;
+
+          & > span {
+            text-transform: capitalize;
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .right {
+        .logo {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 2px solid var(--c-primary);
+          width: 15rem;
+          aspect-ratio: 1;
+
+          & > img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+  }
+
+  .userBusinessesOuter {
+    padding: 1rem 0;
+
+    .title {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--c-black);
+    }
+
+    .userBusinesses {
+      display: flex;
+      flex-direction: column;
+
+      & > a {
+        margin: 1rem 0;
+      }
+
+      .businessCard {
+        display: flex;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        box-shadow: 0px 4px 16px 0px var(--c-shadow);
+        transition: all 0.5s ease;
+        text-decoration: none;
+
+        &:hover {
+          box-shadow: 0px 2px 8px 0px var(--c-primary);
+        }
+
+        .image {
+          width: 10rem;
+          aspect-ratio: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 1rem;
+          border-radius: 0.5rem;
+          overflow: hidden;
+          border: 2px solid var(--c-black);
+
+          & > img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+
+        .businessInfo {
+          .businessName {
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding-bottom: 0.25rem;
+            text-transform: capitalize;
+            color: var(--c-black);
+          }
+
+          .address {
+            font-size: 1rem;
+            color: var(--c-black);
+            font-weight: 500;
+            padding-bottom: 0.25rem;
+            font-family: var(--ff-content);
+          }
+
+          .description {
+            font-size: 0.8rem;
+            color: var(--c-font);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            font-family: var(--ff-content);
+            text-align: justify;
+            line-clamp: 7;
+          }
+        }
+      }
+    }
+  }
+}
+
+.userInteractions {
+  display: flex;
+  justify-content: space-between;
+
+  & > a,
+  & > div {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--c-white);
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    transition: all 0.5s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    .icon {
+      width: 1rem;
+      height: 1rem;
+      margin-right: 0.25rem;
+
+      & > img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .iconSpan {
+      font-size: 1rem;
+    }
+
+    & > span {
+      font-size: 0.8rem;
+      padding-right: 0.25rem;
+
+      // &:last-child {
+      //   padding-right: 0;
+      //   padding-left: 0.25rem;
+      // }
+    }
+
+    &:last-child {
+      & > span {
+        padding-right: 0rem;
+        padding-left: 0.25rem;
+      }
+    }
+  }
+
+  .phoneNo,
+  .views {
+    background: var(--c-blue);
+  }
+
+  .whatsapp,
+  .status {
+    background: var(--c-green);
+  }
+
+  .sendInterest,
+  .leads {
+    background: var(--c-orange);
+  }
+
+  .viewMore,
+  .viewLeads {
+    background: var(--c-black);
+  }
+
+  .share {
+    display: flex;
+    align-items: center;
+    color: var(--c-primary);
+    font-style: italic;
+    font-size: 1rem;
+    font-family: var(--ff-content);
+    cursor: pointer;
+
+    & > span {
+      font-size: 1rem;
+      padding-left: 0.5rem;
+    }
+  }
+}
+
+@media (max-width: 1279px) {
+  .header {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .searchField {
+      width: 100%;
+      flex-direction: column;
+
+      & > div:first-child {
+        padding-right: 0;
+        margin: 1rem 0;
+        width: 100%;
+        align-self: start;
+      }
+    }
+
+    .invite {
+      display: none;
+    }
+
+    .fields {
+      display: flex;
+      justify-content: space-between;
+
+      & > div {
+        width: 48%;
+      }
+    }
+
+    .inviteResponsive {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      color: var(--c-primary);
+      font-style: italic;
+      font-size: 0.75rem;
+      font-family: var(--ff-content);
+      cursor: pointer;
+
+      & > span {
+        display: flex;
+        align-items: center;
+
+        & > span {
+          font-size: 1rem;
+          padding-left: 0.25rem;
+        }
+
+        &:nth-child(2) {
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+
+  .userProfile {
+    padding: 0 0.75rem;
+
+    .userInfoOuter {
+      .userInfo {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+
+        .left {
+          padding-right: 0rem;
+          padding-top: 2rem;
+        }
+
+        .right {
+          align-self: center;
+        }
+      }
+    }
+
+    .userBusinessesOuter {
+      .userBusinesses {
+        .businessCard {
+          padding: 0.5rem;
+
+          .image {
+            width: 7rem;
+            margin-right: 0.4rem;
+            border: 1px solid var(--c-black);
+          }
+
+          .businessInfo {
+            .businessName {
+              font-size: 0.9rem;
+            }
+
+            .address {
+              font-size: 0.75rem;
+            }
+
+            .description {
+              font-size: 0.75rem;
+
+              line-clamp: 3;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .userInteractions {
+    & > a,
+    & > div {
+      padding: 0.25rem;
+      font-size: 0.75rem;
+
+      & > span {
+        font-size: 0.75rem;
+        padding-right: 0.2rem;
+      }
+
+      .icon {
+        width: 0.8rem;
+        height: 0.8rem;
+        margin-right: 0.2rem;
+      }
+
+      .iconSpan {
+        font-size: 0.75rem;
+      }
+    }
+
+    .share {
+      font-size: 0.75rem;
+
+      & > span {
+        font-size: 0.75rem;
+      }
+    }
+  }
+}

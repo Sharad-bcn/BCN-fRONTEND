@@ -1,0 +1,73 @@
+:root {
+  --ff-primary: 'Montserrat';
+  --ff-title: 'Montserrat';
+  --ff-content: 'Poppins';
+}
+
+$base-font-size: 16px;
+
+:root {
+  font-size: $base-font-size;
+  line-height: 1.5;
+}
+
+@media (min-width: 320px) {
+  :root {
+    font-size: $base-font-size * 0.875; // 14px
+  }
+}
+@media (min-width: 360px) {
+  :root {
+    font-size: $base-font-size * 1; // 16px
+  }
+}
+@media (min-width: 412px) {
+  :root {
+    font-size: $base-font-size * 1.125; // 18px
+  }
+}
+@media (min-width: 480px) {
+  :root {
+    font-size: $base-font-size * 1.3125; // 21px
+  }
+}
+@media (min-width: 720px) {
+  :root {
+    font-size: $base-font-size * 1.5; // 24px
+  }
+}
+@media (min-width: 1024px) {
+  :root {
+    font-size: $base-font-size * 2; // 32px
+  }
+}
+@media (min-width: 1280px) {
+  :root {
+    font-size: $base-font-size * 0.875; // 14px
+  }
+}
+@media (min-width: 1336px) {
+  :root {
+    font-size: $base-font-size * 1; // 16px
+  }
+}
+@media (min-width: 1440px) {
+  :root {
+    font-size: $base-font-size * 1.125; // 18px
+  }
+}
+@media (min-width: 1920px) {
+  :root {
+    font-size: $base-font-size * 1.3125; // 21px
+  }
+}
+@media (min-width: 2560px) {
+  :root {
+    font-size: $base-font-size * 1.5; // 24px
+  }
+}
+@media (min-width: 3820px) {
+  :root {
+    font-size: $base-font-size * 1.75; // 28px
+  }
+}

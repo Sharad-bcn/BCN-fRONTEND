@@ -1,0 +1,97 @@
+.main {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.label {
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--c-black);
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.25rem;
+  font-family: var(--ff-title);
+  font-weight: 700;
+}
+
+.advancedSelect {
+  display: flex;
+  position: relative;
+
+  input {
+    color: var(--c-black) !important;
+  }
+
+  .suggestions {
+    padding: 0.25rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+    background: var(--c-white);
+    box-shadow: 0.2rem 0.2rem 0.5rem var(--c-shadow);
+    border: 0.05rem solid var(--c-primary);
+    position: absolute;
+    top: 2.25rem;
+    // min-width: 20vw;
+    min-width: 100%;
+    left: 0;
+    z-index: 2;
+    font-size: 0.8rem;
+    max-height: 30vh;
+    overflow: hidden;
+
+    .suggestionsInner {
+      height: 100%;
+
+      &::-webkit-scrollbar {
+        width: 0.3em;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: var(--c-border);
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--c-primary);
+      }
+
+      & > div {
+        cursor: pointer;
+        // margin: 0.25rem 0;
+        transition: all 0.5s ease;
+        padding: 0.25rem 0.5rem;
+        // margin-right: 0.25rem;
+        border-radius: 0.25rem;
+        font-weight: 500;
+        font-size: 0.8rem;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid var(--c-primary-light);
+
+        &:last-child {
+          border: none;
+        }
+
+        &:hover {
+          background: var(--c-primary-light);
+        }
+      }
+    }
+
+    .suggestedField:hover {
+      color: var(--c-black);
+      font-weight: 600;
+    }
+
+    .detectLocation {
+      color: var(--c-primary);
+
+      & > span {
+        margin-right: 0.25rem;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

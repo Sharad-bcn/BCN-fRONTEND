@@ -1,0 +1,18 @@
+.title {
+  font-size: 2rem;
+  color: var(--c-black);
+  font-weight: 700;
+  text-align: center;
+}
+
+.part4 {
+  .confirm {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    & > span {
+      padding-left: 0.5rem;
+    }
+  }
+}

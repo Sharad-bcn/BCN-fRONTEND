@@ -1,0 +1,30 @@
+.title {
+  font-size: 2rem;
+  color: var(--c-black);
+  font-weight: 700;
+  text-align: center;
+}
+
+.part2 {
+  .resendOTP {
+    padding: 0.25rem 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+
+    .timeRemaining {
+      color: var(--c-blue);
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .resend {
+      color: var(--c-blue);
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+  }
+}

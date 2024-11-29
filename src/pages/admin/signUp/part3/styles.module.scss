@@ -1,0 +1,28 @@
+.title {
+  font-size: 2rem;
+  color: var(--c-black);
+  font-weight: 700;
+  text-align: center;
+}
+
+.info {
+  color: var(--c-black);
+  font-size: 1.2rem;
+  font-weight: 700;
+  // margin-top: 1rem;
+}
+
+@media (max-width: 1279px) {
+  .part3 > div {
+    padding: 0.5rem 0;
+  }
+
+  .info > div:nth-child(1) {
+    padding-bottom: 1rem !important;
+  }
+
+  .info1 {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}

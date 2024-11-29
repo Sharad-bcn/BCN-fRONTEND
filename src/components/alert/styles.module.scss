@@ -1,0 +1,46 @@
+.main {
+  position: fixed;
+  max-width: 25rem;
+  z-index: 10000;
+  margin: auto;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  user-select: none;
+}
+
+.message {
+  width: 100%;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  padding: 0.25rem 1rem;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.25s ease;
+  // animation: message-fade-out 10s forwards;
+  animation-name: message-fade-out;
+  animation-fill-mode: forwards;
+  text-align: center;
+}
+
+@keyframes message-fade-out {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}

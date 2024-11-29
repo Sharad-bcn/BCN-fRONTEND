@@ -1,0 +1,172 @@
+.main {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.register {
+  padding: 0 1rem;
+  height: 100%;
+}
+
+.rejectionMessage {
+  background: var(--c-primary-light);
+  color: var(--c-primary);
+  border: 0.1rem solid var(--c-red);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  text-align: justify;
+
+  .title {
+    font-size: 0.8rem;
+    text-align: center;
+    color: var(--c-black);
+    text-decoration: underline;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  // height: 100%;
+  padding-bottom: 4rem;
+
+  .progress {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+
+    .progressInner {
+      position: absolute;
+      background: var(--c-primary);
+      z-index: 2;
+      height: 0.5rem;
+      width: 95%;
+      left: 1rem;
+      overflow: hidden;
+
+      &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 0%;
+        left: 0rem;
+        height: 1rem;
+        background: var(--c-green);
+        z-index: 4;
+      }
+    }
+
+    .part2::after {
+      width: 33% !important;
+    }
+
+    .part3::after {
+      width: 66% !important;
+    }
+
+    .part4::after {
+      width: 100% !important;
+    }
+
+    .part {
+      border-radius: 50%;
+      padding: 0.25rem;
+      background: var(--c-primary);
+      color: var(--c-primary);
+      cursor: pointer;
+      transition: all 0.5s ease;
+      z-index: 3;
+      position: relative;
+      box-shadow: inset 3px 3px 3px 0px var(--c-shadow);
+      border: 0.2rem solid var(--c-white);
+      position: relative;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      & > span {
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--c-white);
+        width: 2rem;
+        height: 2rem;
+        font-size: 1rem;
+        font-weight: 700;
+        box-shadow: 3px 3px 3px 0px var(--c-shadow);
+      }
+
+      .partInfo {
+        position: absolute;
+        // width: 100%;
+        font-size: 0.75rem;
+        font-weight: 500;
+        bottom: -100%;
+        left: -100%;
+        color: var(--c-black);
+        transform: translate(50%, 60%);
+      }
+    }
+
+    .done {
+      background: var(--c-green);
+      color: var(--c-green);
+    }
+
+    .active {
+      background: var(--c-white);
+      border: 0.2rem solid var(--c-primary);
+      box-shadow: none;
+
+      & > span {
+        color: var(--c-white);
+        background: var(--c-primary);
+        box-shadow: none;
+      }
+
+      .partInfo {
+        color: var(--c-primary);
+      }
+    }
+  }
+}
+
+@media (max-width: 1279px) {
+  .register {
+    padding: 0 0.5rem;
+  }
+
+  .content {
+    .progress {
+      width: 90%;
+
+      .progressInner {
+        height: 0.25rem;
+      }
+
+      .part {
+        & > span {
+          width: 1.5rem;
+          height: 1.5rem;
+          font-size: 0.8rem;
+        }
+        .partInfo {
+          word-break: break-word;
+        }
+      }
+    }
+  }
+}

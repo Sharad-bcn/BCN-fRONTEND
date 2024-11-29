@@ -1,0 +1,83 @@
+.main {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.verifyOuter {
+  height: 100vh;
+  width: 100%;
+  background: url('../../../images/illus/signUp.png');
+  background-repeat: no-repeat;
+}
+
+.verify {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.verifyForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--c-primary-light);
+  border-radius: 1rem;
+  padding: 4rem 4rem 6rem;
+  width: 40vw;
+
+  & > div {
+    padding: 1rem 0;
+
+    &:first-child {
+      padding-top: 0;
+    }
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  .logo {
+    width: 6rem;
+    height: 6rem;
+    padding-bottom: 0;
+
+    & > img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .title {
+    font-size: 2rem;
+    color: var(--c-black);
+    font-weight: 700;
+  }
+
+  .button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    & > a {
+      cursor: pointer;
+      width: 100%;
+      outline: none;
+      border: none;
+      background: var(--c-primary);
+      border-radius: 0.5rem;
+      color: var(--c-white);
+      font-size: 1rem;
+      font-weight: 700;
+      padding: 0.75rem 0.5rem;
+      text-align: center;
+      text-decoration: none;
+    }
+  }
+}

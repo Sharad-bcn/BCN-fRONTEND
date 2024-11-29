@@ -1,0 +1,30 @@
+.mainOuter {
+  background: var(--c-white);
+  width: 100%;
+  // height: 100%;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  max-width: 1280px;
+  margin: auto;
+  // height: 100vh;
+  background: var(--c-white);
+}
+
+.content {
+  // margin-top: 4rem;
+  width: 100%;
+  // overflow: hidden;
+}
+
+@media (max-width: 1279px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .content {
+    width: 100%;
+  }
+}

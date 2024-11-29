@@ -1,0 +1,363 @@
+.main {
+  margin: 0;
+  padding: 0;
+  // height: 100%;
+  width: 100%;
+
+  .adCard {
+    display: flex;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 16px 0px var(--c-shadow);
+    margin: 1rem 0;
+    transition: all 0.5s ease;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0px 2px 8px 0px var(--c-primary);
+    }
+
+    .topCard {
+      display: flex;
+      width: 100%;
+    }
+
+    .bottomCard {
+      display: none;
+    }
+
+    .left {
+      width: 30%;
+      padding-right: 1rem;
+
+      .image {
+        aspect-ratio: 1;
+        width: 100%;
+        border: 2px solid var(--c-black);
+        border-radius: 1rem;
+        overflow: hidden;
+
+        & > img {
+          height: 100%;
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+
+    .leftAlt {
+      width: 20%;
+      padding-right: 0.5rem;
+      margin-right: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      border-right: 0.1rem solid var(--c-primary);
+
+      .imageAlt {
+        border-radius: 50%;
+      }
+
+      .postedOn {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--c-black);
+        text-align: center;
+      }
+    }
+
+    .right {
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .adTitle {
+        font-size: 1.2rem;
+        color: var(--c-black);
+        font-weight: 700;
+        padding-bottom: 0.25rem;
+        width: 70%;
+      }
+
+      .businessName {
+        font-weight: 600;
+        font-size: 1rem;
+        color: var(--c-font);
+        padding-bottom: 0.25rem;
+        cursor: pointer;
+      }
+
+      .address {
+        font-size: 1rem;
+        color: var(--c-black);
+        font-weight: 500;
+        padding-bottom: 0.25rem;
+        font-family: var(--ff-content);
+      }
+
+      .adInfo {
+        font-size: 0.8rem;
+        color: var(--c-font);
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+        font-family: var(--ff-content);
+        text-align: justify;
+      }
+    }
+
+    .adInteractions {
+      display: flex;
+      justify-content: space-between;
+
+      & > a,
+      & > div {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        font-size: 0.8rem;
+        font-weight: 500;
+        color: var(--c-white);
+        cursor: pointer;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        transition: all 0.5s ease;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+
+        .icon {
+          width: 1rem;
+          height: 1rem;
+          margin-right: 0.25rem;
+
+          & > img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+          }
+        }
+
+        .iconSpan {
+          font-size: 1rem;
+        }
+
+        & > span {
+          font-size: 0.8rem;
+          padding-right: 0.25rem;
+
+          // &:last-child {
+          //   padding-right: 0;
+          //   padding-left: 0.25rem;
+          // }
+        }
+
+        &:last-child {
+          & > span {
+            padding-right: 0rem;
+            padding-left: 0.25rem;
+          }
+        }
+      }
+
+      .phoneNo,
+      .views {
+        background: var(--c-blue);
+      }
+
+      .whatsapp,
+      .status {
+        background: var(--c-green);
+      }
+
+      .sendInterest,
+      .leads {
+        background: var(--c-orange);
+      }
+
+      .viewMore,
+      .viewLeads {
+        background: var(--c-black);
+      }
+    }
+
+    .rightAlt {
+      width: 80%;
+      position: relative;
+    }
+
+    .actionIcons {
+      position: absolute;
+      z-index: 1;
+      right: 0;
+      top: 0;
+      display: flex;
+      align-items: center;
+
+      & > div {
+        margin: 0 0.25rem;
+        cursor: pointer;
+        transition: all 0.5s ease;
+
+        &:nth-child(1) > span {
+          font-size: 1.75rem;
+        }
+
+        &:nth-child(2) {
+          color: var(--c-blue);
+        }
+
+        &:last-child {
+          color: var(--c-red);
+        }
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+
+  .adCardAlt {
+    border: 0.1rem solid var(--c-primary);
+    border-radius: 0.5rem;
+  }
+
+  .rejectedMessage {
+    background: var(--c-primary-light);
+    color: var(--c-primary);
+    border: 0.1rem solid var(--c-red);
+    border-top: none;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: justify;
+    transition: all 0.5s ease;
+    box-shadow: 0px 4px 16px 0px var(--c-shadow);
+
+    .title {
+      font-size: 0.8rem;
+      text-align: center;
+      color: var(--c-black);
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: 1279px) {
+  .main {
+    .adCard {
+      padding: 0.5rem;
+      margin: 0.5rem 0;
+      flex-direction: column;
+
+      .left {
+        padding-right: 0.4rem;
+
+        .image {
+          border: 1px solid var(--c-black);
+        }
+      }
+
+      .leftAlt {
+        width: 30%;
+        margin-right: 0.5rem;
+
+        .postedOn {
+          padding: 0.25rem 0;
+          font-size: 0.6rem;
+        }
+      }
+
+      .right {
+        .adTitle {
+          font-size: 0.9rem;
+          padding-bottom: 0.25rem;
+        }
+
+        .businessName {
+          font-size: 0.75rem;
+        }
+
+        .address {
+          font-size: 0.75rem;
+        }
+
+        .adInfo {
+          font-size: 0.6rem;
+          -webkit-line-clamp: 3 !important;
+        }
+
+        .adInteractions {
+          display: none;
+        }
+      }
+
+      .adInteractions {
+        & > a,
+        & > div {
+          padding: 0.25rem;
+          font-size: 0.55rem;
+
+          & > span {
+            font-size: 0.55rem;
+            padding-right: 0.2rem;
+          }
+
+          .icon {
+            width: 0.6rem;
+            height: 0.6rem;
+            margin-right: 0.2rem;
+          }
+
+          .iconSpan {
+            font-size: 0.75rem;
+          }
+        }
+      }
+
+      .rightAlt {
+        width: 70%;
+      }
+
+      .bottomCard {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1rem;
+
+        .adInteractions {
+          width: 100%;
+        }
+      }
+
+      .actionIcons {
+        & > a,
+        & > div {
+          margin: 0 0.35rem;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          & > span {
+            font-size: 1.2rem;
+          }
+
+          .iconSpan {
+            font-size: 1.5rem !important;
+          }
+        }
+        & > div {
+          &:nth-child(1) > span {
+            font-size: 1.75rem !important;
+          }
+        }
+      }
+    }
+  }
+}

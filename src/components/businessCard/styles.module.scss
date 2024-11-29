@@ -1,0 +1,266 @@
+.main {
+  margin: 0;
+  padding: 0;
+  // height: 100%;
+  width: 100%;
+
+  .adCard {
+    display: flex;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 0.1rem solid var(--c-primary);
+    box-shadow: 0px 4px 16px 0px var(--c-shadow);
+    margin: 1rem 0;
+    transition: all 0.5s ease;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0px 2px 8px 0px var(--c-primary);
+    }
+
+    .topCard {
+      display: flex;
+      width: 100%;
+    }
+
+    .bottomCard {
+      display: none;
+    }
+
+    .left {
+      width: 30%;
+      padding-right: 1rem;
+
+      .image {
+        aspect-ratio: 1;
+        width: 100%;
+        border: 2px solid var(--c-black);
+        border-radius: 1rem;
+        overflow: hidden;
+
+        & > img {
+          height: 100%;
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+
+    .right {
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+
+      .adTitle {
+        font-size: 1.2rem;
+        color: var(--c-black);
+        font-weight: 700;
+        padding-bottom: 0.25rem;
+        width: 70%;
+      }
+
+      .directions {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        color: var(--c-red);
+        font-size: 1rem;
+
+        & > span {
+          margin-right: 0.25rem;
+          font-size: 1rem;
+        }
+      }
+
+      .businessName {
+        font-weight: 600;
+        font-size: 1rem;
+        color: var(--c-font);
+        padding-bottom: 0.25rem;
+        cursor: pointer;
+      }
+
+      .address {
+        font-size: 1rem;
+        color: var(--c-black);
+        font-weight: 500;
+        padding-bottom: 0.25rem;
+        font-family: var(--ff-content);
+      }
+
+      .adInfo {
+        font-size: 0.8rem;
+        color: var(--c-font);
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+        font-family: var(--ff-content);
+        text-align: justify;
+      }
+    }
+
+    .adInteractions {
+      display: flex;
+      justify-content: space-between;
+
+      & > a,
+      & > div {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        font-size: 0.8rem;
+        font-weight: 500;
+        color: var(--c-white);
+        cursor: pointer;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        transition: all 0.5s ease;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+
+        .icon {
+          width: 1rem;
+          height: 1rem;
+          margin-right: 0.25rem;
+
+          & > img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+          }
+        }
+
+        .iconSpan {
+          font-size: 1rem;
+        }
+
+        & > span {
+          font-size: 0.8rem;
+          padding-right: 0.25rem;
+
+          // &:last-child {
+          //   padding-right: 0;
+          //   padding-left: 0.25rem;
+          // }
+        }
+
+        &:last-child {
+          & > span {
+            padding-right: 0rem;
+            padding-left: 0.25rem;
+          }
+        }
+      }
+
+      .phoneNo,
+      .views {
+        background: var(--c-blue);
+      }
+
+      .whatsapp,
+      .status {
+        background: var(--c-green);
+      }
+
+      .sendInterest,
+      .leads {
+        background: var(--c-orange);
+      }
+
+      .viewMore,
+      .viewLeads {
+        background: var(--c-black);
+      }
+    }
+  }
+}
+
+@media (max-width: 1279px) {
+  .main {
+    .adCard {
+      padding: 0.5rem;
+      margin: 0.5rem 0;
+      flex-direction: column;
+
+      .left {
+        padding-right: 0.4rem;
+
+        .image {
+          border: 1px solid var(--c-black);
+        }
+      }
+
+      .right {
+        .adTitle {
+          font-size: 0.9rem;
+          padding-bottom: 0.25rem;
+          width: 65%;
+        }
+
+        .directions {
+          font-size: 0.75rem;
+
+          & > span {
+            font-size: 0.75rem;
+          }
+        }
+
+        .businessName {
+          font-size: 0.75rem;
+        }
+
+        .address {
+          font-size: 0.75rem;
+        }
+
+        .adInfo {
+          font-size: 0.6rem;
+          -webkit-line-clamp: 3 !important;
+        }
+
+        .adInteractions {
+          display: none;
+        }
+      }
+
+      .adInteractions {
+        & > a,
+        & > div {
+          padding: 0.25rem;
+          font-size: 0.55rem;
+
+          & > span {
+            font-size: 0.55rem;
+            padding-right: 0.2rem;
+          }
+
+          .icon {
+            width: 0.6rem;
+            height: 0.6rem;
+            margin-right: 0.2rem;
+          }
+
+          .iconSpan {
+            font-size: 0.75rem;
+          }
+        }
+      }
+
+      .bottomCard {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1rem;
+
+        .adInteractions {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

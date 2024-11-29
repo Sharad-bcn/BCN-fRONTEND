@@ -1,0 +1,21 @@
+.main {
+  width: 100%;
+  // position: relative;
+}
+
+.content {
+  // padding: 0 4rem;
+  min-height: 70vh;
+  margin-top: 4rem;
+}
+
+@media (max-width: 1279px) {
+  .main {
+    overflow: hidden;
+  }
+
+  .content {
+    margin-top: 3rem;
+    // padding: 0 2rem;
+  }
+}

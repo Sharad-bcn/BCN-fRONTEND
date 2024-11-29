@@ -1,0 +1,322 @@
+@import 'src/styles/mixins';
+
+.main {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.createAccountOuter {
+  height: 100vh;
+  width: 100%;
+  background: url('../../../images/illus/signUp.png');
+  background-repeat: no-repeat;
+  display: flex;
+}
+
+.createAccount {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.plansSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--c-white);
+  border-radius: 1rem;
+  padding: 3rem 7rem;
+  width: 100%;
+  max-height: 100%;
+  position: relative;
+  padding-top: 5rem;
+  height: unset;
+
+  &::-webkit-scrollbar {
+    width: 0em;
+    height: 0.6em;
+  }
+
+  .title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--c-black);
+    width: 100%;
+    text-align: center;
+    border-right: none;
+    border-left: none;
+  }
+
+  .info {
+    color: var(--c-black);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 1rem;
+  }
+
+  .plans {
+    width: 100%;
+    border: 0.02rem solid var(--c-black);
+    border-style: dashed;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    & > div {
+      margin: 0.5rem 0;
+    }
+  }
+
+  .planInfos {
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+
+    .planInfo {
+      display: flex;
+      align-items: center;
+      color: var(--c-black);
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 0.25rem 0;
+
+      & > span {
+        color: var(--c-primary);
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  .payButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+
+    .button {
+      @include buttonStyle;
+      border: 0.1rem solid var(--c-black);
+      border-radius: 0.5rem;
+      margin-top: 1rem;
+      font-weight: 700;
+      background: var(--c-black);
+      color: var(--c-white);
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      & > span {
+        padding-left: 0.5rem;
+      }
+    }
+  }
+}
+
+.planCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 3px solid var(--c-black);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  transition: all 0.5s ease;
+  box-shadow: 0px 4px 16px 0px var(--c-shadow);
+  aspect-ratio: 3/4;
+
+  &:hover {
+    border: 3px solid var(--c-primary);
+    box-shadow: 0px 4px 16px 0px var(--c-primary);
+    transform: scale(1.05);
+  }
+
+  .top {
+    .duration {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--c-black);
+    }
+  }
+
+  .middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .mrp,
+    .discount {
+      color: var(--c-font);
+      font-size: 1rem;
+      font-weight: 600;
+      font-style: italic;
+      padding: 0;
+    }
+
+    .discount {
+      padding-left: 1rem;
+    }
+
+    .mrp {
+      align-self: flex-start;
+      text-decoration: line-through;
+    }
+
+    .price {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--c-primary);
+    }
+  }
+
+  .bottom {
+    .getStarted {
+      @include buttonStyle;
+      border: 0.1rem solid var(--c-black);
+      border-radius: 1rem;
+      margin-top: 1rem;
+      font-weight: 700;
+      background: var(--c-black);
+      color: var(--c-white);
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      & > span {
+        padding-left: 0.5rem;
+      }
+    }
+  }
+}
+
+.createAccountForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--c-primary-light);
+  border-radius: 1rem;
+  padding: 3rem 4rem;
+  width: 40vw;
+  max-height: 100%;
+
+  &::-webkit-scrollbar {
+    width: 0em;
+  }
+
+  & > div {
+    width: 100%;
+
+    & > div {
+      padding: 1rem 0;
+    }
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  .logo {
+    width: 6rem;
+    height: 6rem;
+    padding-bottom: 0;
+
+    & > img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .title {
+    font-size: 2rem;
+    color: var(--c-black);
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .button {
+    width: 100%;
+
+    & > button {
+      cursor: pointer;
+      width: 100%;
+      outline: none;
+      border: none;
+      background: var(--c-primary);
+      border-radius: 0.5rem;
+      color: var(--c-white);
+      font-size: 1rem;
+      font-weight: 700;
+      margin-top: 0.5rem;
+      padding: 0.75rem 0.5rem;
+      text-align: center;
+    }
+  }
+
+  .alreadyAccount {
+    width: 100%;
+    padding-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--c-black);
+    font-size: 1rem;
+    font-weight: 600;
+
+    & > a {
+      margin-left: 0.5rem;
+      color: var(--c-primary);
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 1279px) {
+  .createAccount {
+    padding: 0 1rem;
+    height: 90vh;
+  }
+
+  .createAccountForm {
+    padding: 2rem 1rem;
+    width: 100%;
+
+    & > div > div {
+      padding: 1rem 0;
+    }
+
+    .title {
+      font-size: 1.5rem;
+    }
+
+    .button > button {
+      padding: 0.5rem;
+    }
+  }
+
+  .plansSection {
+    padding: 2rem 1rem;
+    width: 100%;
+    justify-content: flex-start;
+    padding-top: 4rem;
+
+    .info {
+      margin-top: 2rem;
+    }
+  }
+}

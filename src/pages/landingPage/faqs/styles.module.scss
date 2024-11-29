@@ -1,0 +1,147 @@
+.main {
+  margin: 0;
+  padding: 0;
+}
+
+.faqsSection {
+  height: 100%;
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--c-primary);
+  padding: 1rem 0;
+}
+
+.faqs {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--c-black);
+  text-align: justify;
+
+  & > ul {
+    padding: 0;
+
+    & > li {
+      margin: 0 2rem;
+    }
+  }
+}
+
+.loader {
+  display: flex;
+  height: 100%;
+  min-height: 90vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.faqBody {
+  margin-top: 2rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.faqColumn {
+  width: 48%;
+}
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+  border-radius: 1rem;
+
+  .question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.2rem solid var(--c-border);
+    border-radius: 1rem;
+    cursor: pointer;
+    font-family: var(--ff-title);
+    color: var(--c-font-dark);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 1rem;
+    margin: 0;
+    transition: all 0.5s ease;
+
+    &:hover {
+      border-bottom-color: var(--c-border-dark);
+      color: var(--c-primary);
+    }
+
+    & > span {
+      color: var(--c-primary);
+      font-size: 1.25rem;
+    }
+  }
+
+  .answer {
+    width: 90%;
+    padding: 0;
+    transition: all 0.5s;
+    height: 0;
+    visibility: hidden;
+    display: none;
+  }
+}
+
+.activeFAQ {
+  background-color: var(--c-primary-light);
+  border: 0.05rem solid var(--c-primary);
+
+  .question {
+    border: none;
+    transition: all 0.5s ease;
+    color: var(--c-primary);
+    font-weight: 700;
+  }
+
+  .answer {
+    width: 90%;
+    height: 100%;
+    transition: all 0.5s;
+    justify-content: center;
+    padding: 0rem 0rem 1rem 0rem;
+    visibility: visible;
+    display: flex;
+    font-family: var(--ff-content);
+    color: var(--c-font);
+    font-weight: 400;
+    font-size: 0.8rem;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1279px) {
+  .faqBody {
+    margin-top: 2rem;
+    flex-direction: column;
+  }
+
+  .faqColumn {
+    width: 100%;
+  }
+
+  .faq {
+    .question {
+      padding: 0.7rem 0.5rem;
+    }
+  }
+
+  .activeFAQ {
+    .answer {
+      padding: 0rem 0rem 2rem 0rem;
+    }
+  }
+}

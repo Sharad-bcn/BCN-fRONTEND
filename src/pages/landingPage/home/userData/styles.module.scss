@@ -1,0 +1,43 @@
+.main {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.userData {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  padding: 1.5rem 0;
+
+  .userDataField {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // cursor: pointer;
+
+    & > div {
+      &:nth-child(1) {
+        color: var(--c-primary);
+        font-size: 1.75rem;
+        font-weight: 700;
+      }
+      &:nth-child(2) {
+        font-family: var(--ff-content);
+        font-size: 0.8rem;
+        color: var(--c-black);
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 1279px) {
+  .userData {
+    padding: 1.5rem 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

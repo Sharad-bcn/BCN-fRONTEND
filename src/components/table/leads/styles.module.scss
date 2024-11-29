@@ -1,0 +1,261 @@
+.main {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem 0.5rem;
+}
+
+.tableHeading {
+  width: 100%;
+  background: var(--c-primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-radius: 0.5rem;
+  color: var(--c-primary);
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  & > div {
+    padding: 0 0.5rem;
+  }
+}
+
+.srNo {
+  width: 5%;
+  text-align: center;
+}
+
+.contactPerson {
+  width: 18%;
+}
+
+.contact {
+  width: 12%;
+  white-space: nowrap;
+}
+
+.email {
+  width: 25%;
+}
+
+.state {
+  width: 15%;
+}
+
+.city {
+  width: 15%;
+}
+
+.actions {
+  width: 10%;
+}
+
+.tableBody {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .tableRow {
+    position: relative;
+    width: 100%;
+    padding: 0.75rem 0;
+    // margin: 0.5rem 0;
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    font-family: var(--ff-content);
+    background: var(--c-white);
+    border-radius: 0.5rem;
+    transition: all 0.5s ease;
+
+    &:hover {
+      box-shadow: 2px 4px 15px var(--c-primary-light);
+    }
+
+    & > div,
+    & > a {
+      border-right: 0.1rem solid var(--c-primary);
+      padding: 0.5rem;
+      color: var(--c-black);
+    }
+
+    & > a {
+      text-decoration: underline;
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: none;
+
+      & > div,
+      & > a {
+        aspect-ratio: 1;
+        height: 1.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem;
+        margin: 0 0.25rem;
+        border-radius: 50%;
+        background: var(--c-blue);
+        color: var(--c-white);
+        cursor: pointer;
+        transition: all 0.5s ease;
+
+        & > span {
+          font-size: 0.8rem;
+        }
+
+        &:last-child {
+          background: var(--c-green);
+        }
+
+        & > img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    .expand {
+      position: absolute;
+      color: var(--c-primary);
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      cursor: pointer;
+    }
+
+    .createdAt {
+      position: absolute;
+      font-size: 0.6rem;
+      color: var(--c-font);
+      right: 0;
+      border: none;
+      bottom: -0.5rem;
+    }
+  }
+
+  .query {
+    background: var(--c-primary-light);
+    padding: 1rem;
+    font-size: 0.75rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    box-shadow: 2px 4px 5px var(--c-primary-light);
+  }
+}
+
+@media (max-width: 1279px) {
+  .table {
+    padding: 1rem 0.5rem;
+    padding-bottom: 4rem;
+  }
+
+  .tableHeading {
+    padding: 0.5rem 0;
+    font-size: 0.6rem;
+
+    & > div {
+      padding: 0 0.5rem;
+    }
+  }
+
+  .srNo {
+    width: 2rem;
+    text-align: center;
+  }
+
+  .contactPerson {
+    width: 8rem;
+  }
+
+  .contact {
+    width: 5rem;
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  .email {
+    width: 10rem;
+  }
+
+  .state {
+    width: 8rem;
+  }
+
+  .city {
+    width: 8rem;
+  }
+
+  // .actions {
+  //   width: 4rem;
+  // }
+
+  .tableBody {
+    padding: 0.5rem 0;
+
+    .tableRow {
+      font-size: 0.6rem;
+      padding: 0.5rem 0;
+      // margin: 0.5rem 0;
+      margin-top: 0.5rem;
+      box-shadow: 2px 2px 4px var(--c-primary-light) !important;
+
+      &:hover {
+        box-shadow: 2px 2px 4px var(--c-primary-light);
+      }
+
+      & > div,
+      & > a {
+        padding: 0.25rem 0.5rem;
+      }
+
+      .actions {
+        & > div,
+        & > a {
+          height: 1.5rem;
+          padding: 0.25rem;
+          margin: 0 0.25rem;
+
+          & > span {
+            font-size: 0.8rem;
+          }
+        }
+      }
+
+      .expand {
+        font-size: 1rem;
+      }
+
+      .createdAt {
+        font-size: 0.45rem;
+        bottom: -0.3rem;
+      }
+    }
+
+    .query {
+      padding: 0.5rem 1rem;
+      font-size: 0.6rem;
+      box-shadow: 2px 2px 4px var(--c-primary-light);
+    }
+  }
+}

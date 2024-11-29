@@ -1,0 +1,280 @@
+.main {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem 0.5rem;
+}
+
+.tableHeading {
+  width: 100%;
+  background: var(--c-primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-radius: 0.5rem;
+  color: var(--c-primary);
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  & > div {
+    padding: 0 0.5rem;
+  }
+}
+
+.srNo {
+  width: 10%;
+  text-align: center;
+}
+
+.businessName {
+  width: 25%;
+}
+
+.listingsCount,
+.leads {
+  width: 15%;
+  text-align: center;
+}
+
+.state {
+  width: 20%;
+  text-align: center;
+}
+
+.city {
+  width: 20%;
+  text-align: center;
+}
+
+.actions {
+  width: 10%;
+}
+
+.tableBody {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .tableRow {
+    position: relative;
+    width: 100%;
+    padding: 0.5rem 0;
+    // margin: 0.5rem 0;
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    font-family: var(--ff-content);
+    background: var(--c-white);
+    border-radius: 0.5rem;
+    transition: all 0.5s ease;
+
+    &:hover {
+      box-shadow: 2px 4px 15px var(--c-primary-light);
+    }
+
+    & > div {
+      border-right: 0.1rem solid var(--c-primary);
+      padding: 0.5rem;
+      color: var(--c-black);
+
+      &:last-child {
+        border: none;
+      }
+    }
+
+    .pendingStatus {
+      position: absolute;
+      background: var(--c-primary);
+      color: var(--c-white);
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+      left: -0.05rem;
+      top: 0;
+      transform: translateY(-100%);
+      font-size: 0.5rem;
+      font-weight: 600;
+      padding: 0.2rem 0.75rem;
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+
+      & > div,
+      & > a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0.5rem;
+        color: var(--c-blue);
+        cursor: pointer;
+        transition: all 0.5s ease;
+
+        & > span {
+          font-size: 1rem;
+        }
+
+        &:last-child {
+          color: var(--c-red);
+        }
+
+        & > img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    .listingsCount,
+    .leads {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      & > a {
+        width: fit-content;
+        border-bottom: 0.05rem solid var(--c-primary);
+        color: var(--c-primary);
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        font-size: 0.8rem;
+
+        & > span {
+          display: flex;
+          align-items: center;
+          border: none;
+          font-size: 0.5rem;
+          margin-left: 0.5rem;
+
+          & > span {
+            margin-right: 0.25rem;
+            font-size: 0.6rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.rejectionMessage {
+  background: var(--c-primary-light);
+  color: var(--c-primary);
+  border: 0.1rem solid var(--c-red);
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border-top: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-align: justify;
+
+  .title {
+    font-size: 0.8rem;
+    text-align: center;
+    color: var(--c-black);
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 1279px) {
+  .table {
+    padding: 1rem 0.5rem;
+    padding-bottom: 4rem;
+  }
+
+  .tableHeading {
+    padding: 0.5rem 0;
+    font-size: 0.6rem;
+
+    & > div {
+      padding: 0 0.25rem;
+    }
+  }
+
+  .rejectionMessage {
+    font-size: 0.75rem;
+
+    .title {
+      font-size: 0.75rem;
+    }
+  }
+
+  .srNo {
+    width: 3rem;
+  }
+
+  .businessName {
+    width: 8rem;
+  }
+
+  .listingsCount,
+  .leads {
+    width: 5rem;
+  }
+
+  .state {
+    width: 10rem;
+  }
+
+  .city {
+    width: 8rem;
+  }
+
+  .actions {
+    width: 4rem;
+  }
+
+  .tableBody {
+    padding: 0.5rem 0;
+
+    .tableRow {
+      font-size: 0.6rem;
+      padding: 0.25rem 0;
+      // margin: 0.5rem 0;
+      margin-top: 0.5rem;
+      box-shadow: 2px 2px 4px var(--c-primary-light);
+
+      &:hover {
+        box-shadow: 2px 2px 4px var(--c-primary-light);
+      }
+
+      & > div {
+        padding: 0.25rem;
+      }
+
+      .actions {
+        & > div,
+        & > a {
+          padding: 0.25rem;
+          margin: 0 0.05rem;
+        }
+      }
+
+      .listingsCount,
+      .leads {
+        & > a {
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+}

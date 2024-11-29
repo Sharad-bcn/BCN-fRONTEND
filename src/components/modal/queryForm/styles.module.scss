@@ -1,0 +1,115 @@
+.main {
+  margin: 0;
+  padding: 0;
+  width: 60%;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  color: var(--c-primary);
+  background: var(--c-primary-light);
+  border-radius: 50%;
+  padding: 0.25rem;
+  right: 2.2rem;
+  top: 2.2rem;
+  cursor: pointer;
+}
+
+.queryForm {
+  background: url('../../../images/illus/signUp.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+  width: 100%;
+  padding: 3rem;
+  border-radius: 1rem;
+}
+
+.formInner {
+  background: var(--c-primary-light);
+  border-radius: 1rem;
+  height: 100%;
+
+  & > div {
+    padding: 1rem;
+  }
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.75rem;
+  text-align: center;
+  color: var(--c-black);
+}
+
+.city {
+  width: 50%;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 0;
+
+  & > div {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--c-white);
+    background: var(--c-primary);
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    transition: all 0.5s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    & > span {
+      font-size: 0.8rem;
+      padding-right: 0.25rem;
+    }
+  }
+}
+
+.loader {
+  display: flex;
+  height: 100%;
+  // min-height: 90vh;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1279px) {
+  .main {
+    width: 100%;
+  }
+
+  .city {
+    width: 100%;
+  }
+
+  .close {
+    right: 0.3rem;
+    top: 0.3rem;
+  }
+
+  .queryForm {
+    padding: 1rem;
+    height: 80vh;
+  }
+
+  .title {
+    font-size: 1.25rem;
+  }
+
+  .formInner {
+    .field > div:nth-child(1) {
+      padding-bottom: 2rem;
+    }
+  }
+}

@@ -1,0 +1,126 @@
+.main {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.title {
+  padding: 1rem 0;
+  font-size: 1rem;
+  color: var(--c-black);
+  font-weight: 700;
+
+  & > span {
+    margin-left: 0.5rem;
+    color: var(--c-font);
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+}
+
+.imagesUploadedOuter {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem 0;
+
+  .imagesUploaded {
+    color: var(--c-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 0.5rem;
+    position: relative;
+    border: 1px solid var(--c-primary);
+
+    .uploadProgress {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    & > img {
+      border-radius: 0.5rem;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    & > span {
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: translate(50%, -50%);
+      padding: 0.25rem;
+      border-radius: 50%;
+      aspect-ratio: 1;
+      font-size: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--c-primary);
+      color: var(--c-white);
+      cursor: pointer;
+      transition: all 0.5s ease;
+
+      &:hover {
+        transform: translate(50%, -50%) scale(1.05);
+      }
+    }
+  }
+
+  .imageActions {
+    color: var(--c-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    // width: 10rem;
+    // height: 10rem;
+    width: 100%;
+    aspect-ratio: 1;
+    border: 2px solid var(--c-primary);
+    border-style: dashed;
+    padding: 0;
+    border-radius: 0.5rem;
+    background: var(--c-primary-light);
+
+    .uploadButton {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.5s ease;
+
+      & > span {
+        font-size: 2rem;
+      }
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+@media (max-width: 1279px) {
+  .title {
+    padding: 0.5rem 0;
+  }
+
+  .imagesUploadedOuter {
+    padding: 0.5rem 0;
+    padding-right: 1rem;
+    grid-template-columns: 1fr 1fr;
+  }
+}

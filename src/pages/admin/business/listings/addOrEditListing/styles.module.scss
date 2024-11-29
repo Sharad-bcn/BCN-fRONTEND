@@ -1,0 +1,128 @@
+.main {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.listingActions {
+  padding: 0 1rem;
+  height: 100%;
+}
+
+.actionButtons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 0.1rem solid var(--c-primary);
+  padding: 1rem 0.5rem !important;
+  margin-top: 0.5rem;
+
+  & > div {
+    // width: 45%;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+
+    & > span {
+      padding-right: 0.25rem;
+      font-size: 1rem;
+    }
+
+    &:last-child {
+      margin-right: 0rem;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.add,
+.finish {
+  background: var(--c-primary);
+  color: var(--c-white);
+  border: 0.1rem solid var(--c-primary);
+}
+
+.finish {
+  background: var(--c-green);
+  border: 0.1rem solid var(--c-green);
+}
+
+.discard {
+  background: var(--c-white);
+  color: var(--c-primary);
+  border: 0.1rem solid var(--c-primary);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  // height: 100%;
+  padding-bottom: 4rem;
+
+  & > div {
+    padding: 1rem;
+  }
+}
+
+.rejectionMessage {
+  background: var(--c-primary-light);
+  color: var(--c-primary);
+  border: 0.1rem solid var(--c-red);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  text-align: justify;
+
+  .title {
+    font-size: 0.8rem;
+    text-align: center;
+    color: var(--c-black);
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 1279px) {
+  .listingActions {
+    padding: 0 0.5rem;
+  }
+
+  .actionButtons {
+    & > div {
+      margin-right: 0;
+      font-size: 0.8rem;
+
+      & > span {
+        font-size: 1rem;
+      }
+
+      &:first-child {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  .content {
+    & > div {
+      padding: 0.5rem 0;
+    }
+
+    .rows > div:last-child {
+      padding-top: 1rem;
+    }
+  }
+}
