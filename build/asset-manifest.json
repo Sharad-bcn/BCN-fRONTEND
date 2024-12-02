@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "http://13.201.1.219/static/css/main.8495481b.css",
+    "main.js": "http://13.201.1.219/static/js/main.ab1cb6ac.js",
+    "static/media/locations.png": "http://13.201.1.219/static/media/locations.decbb17c952d771f5ca3.png",
+    "static/media/back4.png": "http://13.201.1.219/static/media/back4.89b1c9a92318a6a43cbb.png",
+    "static/media/location.png": "http://13.201.1.219/static/media/location.373152f83377c8d47701.png",
+    "static/media/card.png": "http://13.201.1.219/static/media/card.574393c75b5f648c2592.png",
+    "static/media/razorPay.png": "http://13.201.1.219/static/media/razorPay.8372e64005a85411fe88.png",
+    "static/media/phonePe.png": "http://13.201.1.219/static/media/phonePe.b85c39e881e19a37e20a.png",
+    "static/media/logo.png": "http://13.201.1.219/static/media/logo.cbfe17ce9d9056d5e919.png",
+    "static/media/back3.png": "http://13.201.1.219/static/media/back3.b8d7495349a5269ede23.png",
+    "static/media/back2.png": "http://13.201.1.219/static/media/back2.73d49e416da341bb83b8.png",
+    "static/media/subscriptionInfo.png": "http://13.201.1.219/static/media/subscriptionInfo.0c5f33aa3e240209efdd.png",
+    "static/media/back.png": "http://13.201.1.219/static/media/back.2f9063cf4e22f4d952f1.png",
+    "static/media/profile.png": "http://13.201.1.219/static/media/profile.5faf09a7795d28bf5a2b.png",
+    "static/media/logoWhite.png": "http://13.201.1.219/static/media/logoWhite.b96fc42e6f4e880d4279.png",
+    "static/media/login.png": "http://13.201.1.219/static/media/login.8f9ae621ac4486fa2cbb.png",
+    "static/media/instagram.png": "http://13.201.1.219/static/media/instagram.3688a6f792a4c78ac939.png",
+    "static/media/noImage.png": "http://13.201.1.219/static/media/noImage.98850546157e0c82939d.png",
+    "index.html": "http://13.201.1.219/index.html",
+    "static/media/whatsapp.svg": "http://13.201.1.219/static/media/whatsapp.07d55ce1f5da6258c85ad46d3ba19337.svg",
+    "static/media/instagram.svg": "http://13.201.1.219/static/media/instagram.dd2866f76c062482238834500c231fea.svg",
+    "static/media/quotes.svg": "http://13.201.1.219/static/media/quotes.28a4076f50812ddaa25dff21782f1158.svg",
+    "static/media/facebook.svg": "http://13.201.1.219/static/media/facebook.d9eb5eb81a15489f713a65084d2e8937.svg",
+    "main.8495481b.css.map": "http://13.201.1.219/static/css/main.8495481b.css.map",
+    "main.ab1cb6ac.js.map": "http://13.201.1.219/static/js/main.ab1cb6ac.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8495481b.css",
+    "static/js/main.ab1cb6ac.js"
+  ]
+}
