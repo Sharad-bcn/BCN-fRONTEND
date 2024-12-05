@@ -688,19 +688,19 @@ const navLinks = [
   // },
 
 
-  // {
+   {
 
 
-  //   name: 'Matrimonial',
+    name: 'Matrimonial',
 
 
-  //   path: '/matrimonial',
+     path: '/matrimonial',
 
 
-  //   icon: 'diversity_1'
+     icon: 'diversity_1'
 
 
-  // },
+   },
 
 
   {

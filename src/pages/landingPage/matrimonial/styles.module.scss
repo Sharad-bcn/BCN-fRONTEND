@@ -1,13 +1,237 @@
-.main {
-  margin: 0;
-  padding: 0;
+// /*body {
+//   margin: 0;
+//   font-family: Arial, sans-serif;
+//   //background: url('https://images.unsplash.com/photo-1628834556809-fd4d8acad67c?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
+//   background-size: cover;
+// }
+
+// /*.form-container {
+//   max-width: 600px;
+//   margin: 50px auto;
+//   padding: 20px;
+//   background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+//  /* border-radius: 10px;
+//   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+//   transition: transform 0.3s ease, box-shadow 0.3s ease;*/
+// /*}
+
+// .form-container:hover {
+//   transform: translateY(-5px);
+//   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+// }
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.2rem; 
+  font-family: 'Georgia', serif; 
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+  letter-spacing: 3px; 
+  position: relative;
+  overflow: hidden; 
+  padding: 10px;
 }
 
-.comingSoon {
-  font-size: 3rem;
-  font-weight: 600;
-  text-align: center;
-  height: 100%;
-  width: 100%;
-  padding: 10rem 0;
+// /* Body */
+// body {
+//   margin: 0;
+//   font-family: Arial, sans-serif;
+//  // background: url('https://images.unsplash.com/photo-1628834556809-fd4d8acad67c?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
+//   background-size: cover;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   min-height: 100vh;
+// }
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
+
+.form {
+  flex: 1; /* Form takes up most of the space */
+  margin-right: 20px; /* Space between the form and image */
+}
+// /* Form Container */
+.form-container {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+// /* Hover Effect for Form */
+.form-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 1); /* Brighten background slightly */
+}
+
+// /* Form Title */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+  font-family: 'Georgia', serif;
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  padding: 1px;
+}
+
+// h2:before {
+//   content: "";
+//   position: absolute;
+//   top: 0;
+//   left: -100%;
+//   width: 100%;
+//   height: 100%;
+//   background: linear-gradient(135deg, #fa8212, #ff5733);
+//   z-index: -1;
+//   transform: skewX(-45deg);
+//   transition: 0.6s ease-in-out;
+// }
+
+// h2:hover:before {
+//   left: 0;
+// }
+
+// h2:after {
+//   content: "";
+//   display: block;
+//   width: 50%;
+//   height: 3px;
+//   background: linear-gradient(135deg, #fa8212, #ff5733);
+//   margin: 10px auto 0;
+//   border-radius: 5px;
+//   animation: expand 0.5s ease-out forwards;
+//   opacity: 0;
+// }
+
+// h2:hover:after {
+//   opacity: 1;
+// }
+
+// /* Labels */
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+  color: #555;
+  transition: color 0.3s ease;
+  text-align: left;
+}
+// label:hover {
+//   color: #ff5733; /* Change label color on hover */
+// }
+
+// /* Input and Select Fields */
+input, select {
+  width: 90%; /* Ensures it stretches across the container */
+  max-width: 400px; /* Restricts the max width for readability */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+  border-color: #ff5733;
+  box-shadow: 0 0 5px rgba(255, 87, 51, 0.5);
+  outline: none;
+}
+
+// /* Hover Effects for Inputs */
+// input:hover, select:hover {
+//   background: #f9f9f9;
+//   transform: scale(1.02); /* Slightly enlarge */
+// }
+
+// /* Submit Button */
+button {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(135deg, #fa8212, #ff5733);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #ff5733, #fa8212); /* Reverse gradient */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+// button:active {
+//   transform: scale(0.98); /* Compress on click */
+//   background: #e65c20; /* Darken slightly */
+// }
+
+.imageSection {
+  flex: 0 0 400px; /* Image takes up fixed width */
+  display: flex;
+  justify-content: center; /* Horizontally center the image */
+  align-items: center; /* Vertically center the image */
+  height: 100vh; /* Ensures the section takes up the full height of the screen */
+}
+
+.imageSection img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+// /* Thank-You Message */
+.thank-you-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #2d3436;
+  font-style: italic;
+  animation: fadeIn 1s ease-in-out;
+}
+
+// /* Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// @keyframes expand {
+//   0% {
+//     width: 0;
+//   }
+//   100% {
+//     width: 50%;
+//   }
+// }
