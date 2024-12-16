@@ -1,13 +1,385 @@
-.main {
+/* General Styles */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
 
-.comingSoon {
-  font-size: 3rem;
-  font-weight: 600;
+/* Container for the whole form */
+.registrationForm {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 20px;
+  background-color: #f4f4f9;
+}
+
+/* Left Side: Form */
+.leftSide {
+  width: 50%;
+  padding: 40px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+h2 {
+  font-size: 32px; /* Slightly larger for better emphasis */
+  font-weight: 700; /* Extra bold for better readability */
+  margin-bottom: 20px;
+  color: #444;
   text-align: center;
-  height: 100%;
+  text-transform: uppercase; /* Makes it look formal and sharp */
+  letter-spacing: 1.5px; /* Adds spacing between letters for elegance */
+  position: relative; /* For pseudo-element effects */
+  display: inline-block; /* Keeps it nicely centered */
+  padding: 10px 20px;
+  background: linear-gradient(to right,( #ff9b52 0%, #fe5858 100%)); /* Gradient text color */
+  -webkit-background-clip: text; /* Makes gradient apply to text */
+  -webkit-text-fill-color: transparent; /* Text becomes gradient-colored */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Adding an underline animation on hover */
+h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 4px;
+  background-color: #dd7026;
+  transition: all 0.4s ease;
+  transform: translateX(-50%);
+}
+
+h2:hover::after {
+  width: 100%; /* Expands the underline on hover */
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Form Inputs */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="tel"],
+select,
+textarea {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
   width: 100%;
-  padding: 10rem 0;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #b3940a;
+  box-shadow: 0 0 5px rgba(224, 137, 6, 0.3);
+}
+
+/* Underlined Input Style */
+.underlinedInput {
+  border-bottom: 2px solid #ddd;
+  border-radius: 0;
+}
+
+input[type="radio"] {
+  margin-right: 8px;
+}
+
+/* Button Styles */
+button {
+  padding: 12px 20px;
+  background: linear-gradient(90deg, #ff9b52 0%, #fe5858 100%); /* Gradient background */
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+  margin-top: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+button:hover {
+  background: linear-gradient(90deg, #fe5858 0%, #ff9b52 100%); /* Reverse gradient on hover */
+  transform: scale(1.05); /* Slightly enlarges the button */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+button:disabled {
+  background: linear-gradient(90deg, #b8d8b8 0%, #d6d6d6 100%); /* Disabled gradient */
+  cursor: not-allowed;
+  box-shadow: none; /* No shadow when disabled */
+}
+
+
+/* Label Styles */
+/* Label Styles */
+label {
+  font-size: 16px;
+  color: #555;
+  font-weight: 500; /* Slightly bolder text for a more professional look */
+  transition: color 0.3s ease-in-out; /* Smooth transition on hover */
+}
+
+label:hover {
+  color: #ff9b52; /* Change label color on hover */
+}
+
+/* Checkbox Group */
+.checkboxGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 16px;
+}
+
+.checkboxGroup label {
+  font-size: 16px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.checkboxGroup label:hover {
+  color: #ff9b52; /* Change label color on hover */
+}
+
+.checkboxGroup input[type="checkbox"] {
+  margin-right: 8px;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ff9b52;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.checkboxGroup input[type="checkbox"]:checked {
+  background-color: #ff9b52; /* Color of checkbox when checked */
+  border-color: #ff9b52; /* Border color when checked */
+  transition: all 0.3s ease;
+}
+
+.checkboxGroup input[type="checkbox"]:checked::before {
+  content: '\2713'; /* Check mark */
+  color: white;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 2px;
+}
+
+/* Radio Button Styles */
+input[type="radio"] {
+  margin-right: 8px;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ff9b52;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input[type="radio"]:checked {
+  background-color: #ff9b52;
+  border-color: #ff9b52;
+  transition: all 0.3s ease;
+}
+
+input[type="radio"]:checked::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  display: block;
+  margin: 4px;
+}
+
+/* Hover Effects for Checkbox and Radio */
+.checkboxGroup input[type="checkbox"]:hover,
+input[type="radio"]:hover {
+  border-color: #ff9b52;
+  background-color: #ffe4c4; /* Light background effect */
+}
+
+/* Error Message Styles */
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Success Message Styles */
+.success {
+  color: #4CAF50;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+
+/* Right Side: Background Image */
+.rightSide {
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensures no overflow */
+  border-radius: 10px; /* Rounded corners for a modern look */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+/* Background Image Styling */
+.backgroundImage {
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  object-fit: cover; /* Ensures the image covers without distortion */
+  object-position: center; /* Centers the focus of the image */
+  border-radius: 10px; /* Matches the container */
+  transition: transform 0.5s ease, box-shadow 0.3s ease; /* Smooth animation */
+}
+
+/* Hover Effect: Add depth */
+.backgroundImage:hover {
+  transform: scale(1.03); /* Slight zoom effect */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .rightSide {
+    width: 100%;
+    height: 250px; /* Adjust image height for small screens */
+    border-radius: 0; /* Remove rounded corners */
+  }
+
+  .backgroundImage {
+    height: 100%;
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .registrationForm {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .leftSide, .rightSide {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .leftSide {
+    box-shadow: none;
+  }
+
+  .rightSide {
+    border-radius: 0;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px 18px;
+  }
+}
+
+.siblingField {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.siblingField label {
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.siblingField input {
+  padding: 12px;
+  font-size: 16px;
+  color: #555;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.siblingField input:focus {
+  border-color: #da6c12;
+  box-shadow: 0 0 6px rgba(241, 130, 4, 0.4);
+  outline: none;
+}
+
+.siblingField input:hover {
+  border-color: #da6c12;
+}
+
+/* Consistent Input Field Margin */
+.siblingField,
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="tel"],
+select,
+textarea {
+  margin-bottom: 16px; /* Ensure uniform spacing between inputs */
+}
+
+/* Hover Effects for Form Fields */
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="date"]:hover,
+input[type="tel"]:hover,
+select:hover,
+textarea:hover {
+  border-color: #da6c12;
+}
+
+input[type="radio"]:checked {
+  background-color: #da6c12;
+  border-color: #da6c12;
+}
+
+/* Error Message Styles */
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Form Success Message */
+.success {
+  color: rgb(199, 116, 8);
+  font-size: 14px;
+  margin-top: 5px;
 }
